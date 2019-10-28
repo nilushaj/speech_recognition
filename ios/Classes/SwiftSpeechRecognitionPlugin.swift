@@ -109,7 +109,7 @@ public class SwiftSpeechRecognitionPlugin: NSObject, FlutterPlugin, SFSpeechReco
 
     let audioSession = AVAudioSession.sharedInstance()
     try audioSession.setCategory(AVAudioSession.Category.record, mode: .default)
-    try audioSession.setMode(AVAudioSession.Mode.measurement)
+    //try audioSession.setMode(AVAudioSession.Mode.measurement)
     try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
 
     recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
@@ -172,7 +172,7 @@ public class SwiftSpeechRecognitionPlugin: NSObject, FlutterPlugin, SFSpeechReco
     case "es_ES":
         return speechRecognizerEs
     default:
-      return speechRecognizerFr
+      return speechRecognizerEn
     }
   }
 
